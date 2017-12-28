@@ -1,0 +1,387 @@
+
+@import "https://use.fontawesome.com/releases/v5.0.2/css/all.css";
+@import 'prefixer.less';
+
+
+.white {
+    color: #fff;
+}
+
+.black {
+    color: #000;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.blue {
+    color: #06a3e9;
+}
+
+.controller-container {
+    display: flow-root;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#switch-checkbox {
+    display: inline-block;
+    margin: 10px;
+}
+
+// Flip card effect
+.dff-flip {
+    transform-style: preserve-3d;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    float: left;
+    &>.front {
+        position: absolute;
+        .transform(perspective(800px) rotateY(0deg));
+        background-color: beige;
+        width: 250px;
+        height: 250px;
+        .border-radius(0 15px 0 15px);
+        backface-visibility: hidden;
+        .transition(transform .5s linear 0s);
+    }
+
+    &>.back {
+        position: absolute;
+        .transform(perspective(800px) rotateY(180deg));
+        background-color: lightgray;
+        width: 250px;
+        height: 250px;
+        .border-radius(0 15px 0 15px);
+        backface-visibility: hidden;
+        .transition( transform .5s linear 0s);
+    }
+
+    &:hover>.front {
+        .transform(perspective(800px) rotateY(-180deg))
+    }
+
+    &:hover>.back {
+        .transform(perspective(800px) rotateY(0deg))
+    }
+
+    &.vertical>.front {
+        .transform( perspective(800px) rotateX(0deg) rotateY(0deg))
+    }
+
+    &.vertical>.back {
+        .transform( perspective(800px) rotateX(180deg) rotateY(0deg))
+    }
+
+    &.vertical:hover>.front {
+        .transform( perspective(800px) rotateX(-180deg))
+    }
+
+    &.vertical:hover>.back {
+        .transform( perspective(800px) rotateX(0deg))
+    }
+}
+
+// Switch button
+.dff-switch {
+    opacity: 0;
+
+    input[type="checkbox"]:checked + .switch-btn {
+        background-color: #44d493;
+    }
+
+    input[type="checkbox"]:checked + .switch-btn:before {
+        //left: 42px;
+        .translate(42px, 0)
+    }
+
+    input[type="checkbox"]:focus + .switch-btn:before, input[type="checkbox"]:hover + .switch-btn:before {
+        background: linear-gradient(#fff, #ccc)
+    }
+
+    .switch-btn {
+        border-radius: 25px;
+        .inner-shadow( 0 5px 10px rgba(0, 0, 0, 0.3));
+        width: 80px;
+        height: 40px;
+        background-color: rgb(206, 206, 206);
+        position: relative;
+        cursor: pointer;
+    }
+
+    .switch-btn:before {
+        border-radius: 50%;
+        .box-shadow( 0 8px 6px -3px rgba(0, 0, 0, 0.3));
+        content: '';
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        background: radial-gradient(circle farthest-corner at center, #FFF 20%, rgba(64, 64, 64, 0.7) 99%);
+        left: 2px;
+        top: 2px;
+        .transition( all 180ms ease-out);
+    }
+
+    &.vertical {
+        .switch-btn {
+            width: 40px;
+            height: 80px;
+        }
+        input[type="checkbox"]:checked + .switch-btn:before {
+            //top: 42px;
+            //left: 2px;
+            .translate(0, 42px)
+        }
+    }
+}
+
+// Checkbox button custom
+.dff-chk {
+    cursor: pointer;
+    color: rgb(59, 59, 59);
+    input[type="checkbox"] {
+        display: none;
+ 
+        & + span:before {
+            content: "\f0c8";
+            font-family: 'Font Awesome\ 5 Free';
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            width: 1em;
+            margin-right: 4px;
+            display: inline-block;
+            .animation(tickOut 190ms ease-in)
+        }
+        &:checked + span:before {
+            content: "\f14a";
+            color: #06a3e9;
+            font-weight: 900;
+            .animation(tick 190ms ease-in)
+        }
+        &:disabled + span:before {
+            content: "\f0c8";
+            font-weight: 900;
+            color: #ccc;
+            
+        }
+        
+    }
+    &.round input[type="checkbox"] {
+        & + span:before {
+            content: "\f111";
+        }
+        &:checked + span:before {
+            content: "\f058";
+        }
+        &:disabled + span:before {
+            content: "\f111";
+        }
+    }
+}
+
+// Radio button custom
+.dff-rdio {
+    cursor: pointer;
+    color: rgb(59, 59, 59);
+    input[type="radio"] {
+        display: none;
+ 
+        & + span:before {
+            content: "\f0c8";
+            font-family: 'Font Awesome\ 5 Free';
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            width: 1em;
+            margin-right: 4px;
+            display: inline-block;
+            .animation(tickOut 190ms ease-in)
+        }
+        &:checked + span:before {
+            content: "\f14a";
+            color: #06a3e9;
+            font-weight: 900;
+            .animation(tick 190ms ease-in)
+        }
+        &:disabled + span:before {
+            content: "\f0c8";
+            font-weight: 900;
+            color: #ccc;
+            
+        }
+        
+    }
+    &.round input[type="radio"] {
+        & + span:before {
+            content: "\f111";
+        }
+        &:checked + span:before {
+            content: "\f058";
+        }
+        &:disabled + span:before {
+            content: "\f111";
+        }
+    }
+}
+
+// Book animation effect
+.dff-book {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    margin: 100px auto;
+    background: #06a3e9;
+    background-size: cover;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    backface-visibility: hidden; 
+    &.landscape {
+        width: 350px;
+        height: 200px;
+    }
+    
+    &.hover:hover {
+        .book-cover {
+            transform: rotateY(-180deg) ;
+            backface-visibility: hidden;
+        }
+    }
+    
+    .dff-page {
+        .book-cover {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border: 1px solid black;
+            background: #44d493;
+            background-size: cover;
+            transform-origin: 0 50%;
+            transition: all 0.8s ease;
+            backface-visibility: visible;
+            font-size: 1em;
+            z-index: 2;
+            img {
+                //position: relative;
+                width: 100%;
+                height: 100%;
+                image-rendering: pixelated;
+            }
+            .center-txt {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .top-left-txt {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                max-width: 49%;
+                max-height: 49%;
+            }
+            .bottom-left-txt {
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
+                max-width: 49%;
+                max-height: 49%;
+            }
+            .top-right-txt {
+                position: absolute;
+                top: 8px;
+                right: 16px;
+                max-width: 49%;
+                max-height: 49%;
+                text-align: right;
+            }
+            .bottom-right-txt {
+                position: absolute;
+                bottom: 8px;
+                right: 16px;
+                max-width: 49%;
+                max-height: 49%;
+                text-align: right;
+            }
+            .book-title {
+                font-size: 1.4em;
+                color: #ffd800;
+                text-shadow: outset 0 0.4em 0.2em 0;
+                text-shadow: darken(#ffd800, 10%);
+                text-decoration: underline currentColor;
+            }
+        }
+        input[type=checkbox] {
+            &.dff-chg-page {
+                position: absolute;
+                left: -9999px;
+                & ~ label {
+                    position: absolute;
+                    background: #08C;
+                    bottom: 0px;
+                    right: 0px;
+                    padding: 5px;
+                    border: 1px solid rgba(0,0,0,.1);
+                    border-radius: 2px;
+                    color: white;
+                    font-weight: bold;
+                    z-index: 3;
+                }
+            }
+            &:checked.dff-chg-page {
+                & ~ div {
+                    opacity: 0;
+                    transition: opacity 0.25s ease 0.25s;
+                    transform: rotateY(-180deg);
+                    transition: all 2s ease;
+                }
+                & ~ label {
+                    display: none;
+                }
+            }
+        }
+        .book-page {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+            display: block;
+            background: #FFF;
+            z-index: 1;
+            transform-origin: 0 50%;
+            transition: all 0.8s ease;
+        }
+    }
+}
+
+/**
+ * Animations
+ **/
+.keyframes(tick, {
+    0% {
+        .transform(scale(0))
+    }
+    90% {
+        .transform(scale(1.4))
+    }
+    100% {
+        .transform(scale(1))
+    }
+});
+.keyframes(tickOut, {
+    0% {
+        .transform(scale(1))
+    }
+    10% {
+        .transform(scale(1.4))
+    }
+    100% {
+        .transform(scale(0))
+    }
+});
