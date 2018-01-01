@@ -1,8 +1,5 @@
-
 @import "https://use.fontawesome.com/releases/v5.0.2/css/all.css";
 @import 'prefixer.less';
-
-
 .white {
     color: #fff;
 }
@@ -25,6 +22,7 @@
     width: 100%;
     height: 100%;
 }
+
 #switch-checkbox {
     display: inline-block;
     margin: 10px;
@@ -47,7 +45,6 @@
         backface-visibility: hidden;
         .transition(transform .5s linear 0s);
     }
-
     &>.back {
         position: absolute;
         .transform(perspective(800px) rotateY(180deg));
@@ -58,27 +55,21 @@
         backface-visibility: hidden;
         .transition( transform .5s linear 0s);
     }
-
     &:hover>.front {
         .transform(perspective(800px) rotateY(-180deg))
     }
-
     &:hover>.back {
         .transform(perspective(800px) rotateY(0deg))
     }
-
     &.vertical>.front {
         .transform( perspective(800px) rotateX(0deg) rotateY(0deg))
     }
-
     &.vertical>.back {
         .transform( perspective(800px) rotateX(180deg) rotateY(0deg))
     }
-
     &.vertical:hover>.front {
         .transform( perspective(800px) rotateX(-180deg))
     }
-
     &.vertical:hover>.back {
         .transform( perspective(800px) rotateX(0deg))
     }
@@ -87,20 +78,17 @@
 // Switch button
 .dff-switch {
     opacity: 0;
-
-    input[type="checkbox"]:checked + .switch-btn {
+    input[type="checkbox"]:checked+.switch-btn {
         background-color: #44d493;
     }
-
-    input[type="checkbox"]:checked + .switch-btn:before {
+    input[type="checkbox"]:checked+.switch-btn:before {
         //left: 42px;
         .translate(42px, 0)
     }
-
-    input[type="checkbox"]:focus + .switch-btn:before, input[type="checkbox"]:hover + .switch-btn:before {
+    input[type="checkbox"]:focus+.switch-btn:before,
+    input[type="checkbox"]:hover+.switch-btn:before {
         background: linear-gradient(#fff, #ccc)
     }
-
     .switch-btn {
         border-radius: 25px;
         .inner-shadow( 0 5px 10px rgba(0, 0, 0, 0.3));
@@ -110,7 +98,6 @@
         position: relative;
         cursor: pointer;
     }
-
     .switch-btn:before {
         border-radius: 50%;
         .box-shadow( 0 8px 6px -3px rgba(0, 0, 0, 0.3));
@@ -123,13 +110,12 @@
         top: 2px;
         .transition( all 180ms ease-out);
     }
-
     &.vertical {
         .switch-btn {
             width: 40px;
             height: 80px;
         }
-        input[type="checkbox"]:checked + .switch-btn:before {
+        input[type="checkbox"]:checked+.switch-btn:before {
             //top: 42px;
             //left: 2px;
             .translate(0, 42px)
@@ -143,8 +129,7 @@
     color: rgb(59, 59, 59);
     input[type="checkbox"] {
         display: none;
- 
-        & + span:before {
+        &+span:before {
             content: "\f0c8";
             font-family: 'Font Awesome\ 5 Free';
             font-style: normal;
@@ -157,28 +142,26 @@
             display: inline-block;
             .animation(tickOut 190ms ease-in)
         }
-        &:checked + span:before {
+        &:checked+span:before {
             content: "\f14a";
             color: #06a3e9;
             font-weight: 900;
             .animation(tick 190ms ease-in)
         }
-        &:disabled + span:before {
+        &:disabled+span:before {
             content: "\f0c8";
             font-weight: 900;
             color: #ccc;
-            
         }
-        
     }
     &.round input[type="checkbox"] {
-        & + span:before {
+        &+span:before {
             content: "\f111";
         }
-        &:checked + span:before {
+        &:checked+span:before {
             content: "\f058";
         }
-        &:disabled + span:before {
+        &:disabled+span:before {
             content: "\f111";
         }
     }
@@ -190,8 +173,7 @@
     color: rgb(59, 59, 59);
     input[type="radio"] {
         display: none;
- 
-        & + span:before {
+        &+span:before {
             content: "\f0c8";
             font-family: 'Font Awesome\ 5 Free';
             font-style: normal;
@@ -204,28 +186,26 @@
             display: inline-block;
             .animation(tickOut 190ms ease-in)
         }
-        &:checked + span:before {
+        &:checked+span:before {
             content: "\f14a";
             color: #06a3e9;
             font-weight: 900;
             .animation(tick 190ms ease-in)
         }
-        &:disabled + span:before {
+        &:disabled+span:before {
             content: "\f0c8";
             font-weight: 900;
             color: #ccc;
-            
         }
-        
     }
     &.round input[type="radio"] {
-        & + span:before {
+        &+span:before {
             content: "\f111";
         }
-        &:checked + span:before {
+        &:checked+span:before {
             content: "\f058";
         }
-        &:disabled + span:before {
+        &:disabled+span:before {
             content: "\f111";
         }
     }
@@ -241,19 +221,17 @@
     background-size: cover;
     transform-style: preserve-3d;
     perspective: 500px;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
     &.landscape {
         width: 350px;
         height: 200px;
     }
-    
     &.hover:hover {
         .book-cover {
-            transform: rotateY(-180deg) ;
+            transform: rotateY(-180deg);
             backface-visibility: hidden;
         }
     }
-    
     .dff-page {
         .book-cover {
             position: absolute;
@@ -321,13 +299,13 @@
             &.dff-chg-page {
                 position: absolute;
                 left: -9999px;
-                & ~ label {
+                &~label {
                     position: absolute;
                     background: #08C;
                     bottom: 0px;
                     right: 0px;
                     padding: 5px;
-                    border: 1px solid rgba(0,0,0,.1);
+                    border: 1px solid rgba(0, 0, 0, .1);
                     border-radius: 2px;
                     color: white;
                     font-weight: bold;
@@ -335,13 +313,13 @@
                 }
             }
             &:checked.dff-chg-page {
-                & ~ div {
+                &~div {
                     opacity: 0;
                     transition: opacity 0.25s ease 0.25s;
                     transform: rotateY(-180deg);
                     transition: all 2s ease;
                 }
-                & ~ label {
+                &~label {
                     display: none;
                 }
             }
@@ -360,9 +338,208 @@
     }
 }
 
+// 3D Cube
+.dff-cube {
+    width: 400px;
+    height: 400px;
+    margin: 200px auto;
+    perspective: 800px;
+    &:hover {
+        &.rotateHoverLeft {
+            #cube {
+                .animation( rotateLeft 2s ease-in);
+                -webkit-animation-fill-mode: forwards;
+                /* Safari 4.0 - 8.0 */
+                animation-fill-mode: forwards;
+            }
+        }
+        &.rotateHoverRight {
+            #cube {
+                .animation( rotateRight 2s ease-in);
+                -webkit-animation-fill-mode: forwards;
+                /* Safari 4.0 - 8.0 */
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    &.rotateTopAction {
+        #cube {
+            .animation( rotateTop 1s ease);
+            -webkit-animation-fill-mode: forwards;
+            /* Safari 4.0 - 8.0 */
+            animation-fill-mode: forwards;
+        }
+    }
+    &.rotateBottomAction {
+        #cube {
+            .animation( rotateBottom 1s ease);
+            -webkit-animation-fill-mode: forwards;
+            /* Safari 4.0 - 8.0 */
+            animation-fill-mode: forwards;
+        }
+    }
+    &.rotateLeftAction {
+        #cube {
+            .animation( rotateLeft 1s ease);
+            -webkit-animation-fill-mode: forwards;
+            /* Safari 4.0 - 8.0 */
+            animation-fill-mode: forwards;
+        }
+    }
+    &.rotateRightAction {
+        #cube {
+            .animation( rotateRight 1s ease);
+            -webkit-animation-fill-mode: forwards;
+            /* Safari 4.0 - 8.0 */
+            animation-fill-mode: forwards;
+        }
+    }
+    &.rotateAuto {
+        #cube {
+            .animation( rotate 15s linear infinite);
+        }
+    }
+        .transform( translateZ(200px));
+        input[type="radio"] {
+            &:checked {
+                &#cube-top~#cube {
+                    .animation( rotateTop 1s ease);
+                    -webkit-animation-fill-mode: forwards;
+                    /* Safari 4.0 - 8.0 */
+                    animation-fill-mode: forwards;
+                }
+                &#cube-bottom~#cube {
+                    .animation( rotateBottom 1s ease);
+                    -webkit-animation-fill-mode: forwards;
+                    /* Safari 4.0 - 8.0 */
+                    animation-fill-mode: forwards;
+                }
+                &#cube-left~#cube {
+                    .animation( rotateLeft 1s ease);
+                    -webkit-animation-fill-mode: forwards;
+                    /* Safari 4.0 - 8.0 */
+                    animation-fill-mode: forwards;
+                }
+                &#cube-right~#cube {
+                    .animation( rotateRight 1s ease);
+                    -webkit-animation-fill-mode: forwards;
+                    /* Safari 4.0 - 8.0 */
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+        label {
+            z-index: 1;
+            position: absolute;
+            cursor: pointer;
+            &.cube-top,
+            &.cube-bottom,
+            &.cube-left,
+            &.cube-right {
+                //margin: 0;
+                transform: translateZ(200px);
+                //background-color: transparent;
+                //border: none;
+                & span:before {
+                    content: "\f0c8";
+                    font-family: 'Font Awesome\ 5 Free';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    width: 1em;
+                    margin-right: 4px;
+                    display: inline-block;
+                }
+            }
+            &.cube-top {
+                top: 0%;
+                left: 49%;
+                & span:before {
+                    content: "\f062";
+                    color: #06a3e9;
+                    font-weight: 900;
+                }
+            }
+            &.cube-bottom {
+                bottom: 0;
+                left: 49%;
+                & span:before {
+                    content: "\f063";
+                    color: #06a3e9;
+                    font-weight: 900;
+                }
+            }
+            &.cube-left {
+                left: 0%;
+                top: 49%;
+                & span:before {
+                    content: "\f060";
+                    color: #06a3e9;
+                    font-weight: 900;
+                }
+            }
+            &.cube-right {
+                right: 0%;
+                top: 49%;
+                & span:before {
+                    content: "\f061";
+                    color: #06a3e9;
+                    font-weight: 900;
+                }
+            }
+        }
+    
+    #cube {
+        width: 400px;
+        transform-style: preserve-3d;
+        color: #f49e4d;
+        font-size: 2.5em;
+        text-align: center;
+        div {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            opacity: .81;
+            &#front {
+                .transform( translateZ(200px));
+                background-color: #222020;
+                transform-origin: unset;
+            }
+            &#back {
+                .transform( rotateY(180deg) translateZ(200px));
+                background-color: #222020;
+            }
+            &#left {
+                .transform( rotateY(-90deg) translateX(-200px));
+                background-color: #222020;
+                transform-origin: left;
+            }
+            &#right {
+                .transform( rotateY(90deg) translateX(200px));
+                background-color: #222020;
+                transform-origin: right;
+            }
+            &#top {
+                .transform( rotateX(-270deg) translateY(-200px));
+                background-color: #222020;
+                transform-origin: top;
+            }
+            &#bottom {
+                .transform( rotateX(270deg) translateY(200px));
+                background-color: #222020;
+                transform-origin: bottom;
+            }
+        }
+    }
+}
+
+
 /**
  * Animations
  **/
+
 .keyframes(tick, {
     0% {
         .transform(scale(0))
@@ -373,7 +550,9 @@
     100% {
         .transform(scale(1))
     }
-});
+}
+
+);
 .keyframes(tickOut, {
     0% {
         .transform(scale(1))
@@ -384,4 +563,57 @@
     100% {
         .transform(scale(0))
     }
-});
+}
+
+);
+.keyframes(rotate, {
+    0% {
+        transform: rotateY(0deg)
+    }
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+);
+.keyframes(rotateBottom, {
+    0% {
+        transform: rotateX(0deg)
+    }
+    100% {
+        transform: rotateX(90deg) translateY(-200px) translateZ(-200px)
+    }
+}
+
+);
+.keyframes(rotateTop, {
+    0% {
+        transform: rotateX(0deg)
+    }
+    100% {
+        transform: rotateX(-90deg) translateY(-200px) translateZ(200px)
+    }
+}
+
+);
+.keyframes(rotateLeft, {
+    0% {
+        //transform: rotateY(0deg);
+        transform: initial;
+    }
+    100% {
+        transform: rotateY(90deg)
+    }
+}
+
+);
+.keyframes(rotateRight, {
+    0% {
+        transform: rotateY(0deg)
+    }
+    100% {
+        transform: rotateY(-90deg)
+    }
+}
+
+);

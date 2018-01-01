@@ -129,7 +129,7 @@
         </ul>
         
     </div>
-    <div id="custom-gauge-container" class="controller-container">
+    <div id="custom-controls-container" class="controller-container">
         <span class="title">Custom Controllers</span>
         <div class="description">
             List of various custom inputs
@@ -190,6 +190,54 @@
                     </div>
                 </div>
             </ul>
+        </div>
+        <span class="title">3D Cube</span>
+        <div class="description">
+            List of various custom inputs
+
+        </div>
+        <div class="block">
+            <div class="dff-cube rotateAuto">
+                <div id="cube">
+                    <div id="front">This is the front of the cube</div>
+                    <div id="back">This is the back of the cube</div>
+                    <div id="left">This is the left side of the cube</div>
+                    <div id="right">This is the right side of the cube</div>
+                    <div id="top">This is the top of the cube</div>
+                    <div id="bottom">This is the bottom of the cube</div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="block">
+            
+            <div class="dff-cube rotateRightAction">
+                <input type="radio" name="rotate-cube" id="cube-top"></input>
+                <label class="cube-top" for="cube-top">    
+                    <span></span>
+                </label>
+                <input type="radio" name="rotate-cube" id="cube-bottom"></input>
+                <label class="cube-bottom" for="cube-bottom">
+                    <span></span>
+                </label>
+                <input type="radio" name="rotate-cube" id="cube-left"></input>
+                <label class="cube-left" for="cube-left">
+                    <span></span>
+                </label>
+                <input type="radio" name="rotate-cube" id="cube-right"></input>
+                <label class="cube-right" for="cube-right">
+                    <span></span>
+                </label>
+                
+                <div id="cube">
+                    <div id="front">This is the front of the cube</div>
+                    <div id="back">This is the back of the cube</div>
+                    <div id="left">This is the left side of the cube</div>
+                    <div id="right">This is the right side of the cube</div>
+                    <div id="top">This is the top of the cube</div>
+                    <div id="bottom">This is the bottom of the cube</div>
+                </div>
+            </div> 
         </div>
     </div>
 </body>
