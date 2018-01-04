@@ -6,44 +6,21 @@
 </head>
 
 <body>
-    <div id="flip-card-container" class="controller-container">
-        <span class="title">Flip Card Controller</span>
+    <div id="form-container" class="controller-container">
+        <span class="title">Form inputs</span>
         <div class="description">
-            This controller create a card that can flip on mouse hover. You can display information on both side of the card.
+            List of various custom Form inputs
         </div>
-
-        <div class="dff-flip">
-            <div class="back">
-                card 1 back
-            </div>
-            <div class="front">
-                card 1 front
-            </div>
-        </div>
-        <div class="dff-flip">
-            <div class="back">
-                card 2 back
-            </div>
-            <div class="front">
-                card 2 front
-            </div>
-        </div>
-        <div class="dff-flip vertical">
-            <div class="back">
-                card 3 back
-            </div>
-            <div class="front">
-                card 3 front vertical flip
-            </div>
-        </div>
-        <div class="dff-flip">
-            <div class="back">
-                card 4 back
-            </div>
-            <div class="front">
-                card 4 front
-            </div>
-        </div>
+        <form action="" type="POST">
+                <label for="text-test">Text input</label>
+            <input type="text" name="text-test" placeholder="This is a placeholder text"/>
+            
+            <label for="text-test">Mail input</label>
+            <span class="dff-input-addon"><i class="fas fa-at"></i></span>
+            <span class="dff-input-addon right"><i class="fas fa-times"></i></span>
+            <input type="mail" name="text-test" placeholder="Your e-mail adress"/>
+            
+        </form>
     </div>
 
     <div id="switch-button-container" class="controller-container">
@@ -191,10 +168,52 @@
                 </div>
             </ul>
         </div>
+
+        <div id="flip-card-container">
+            <span class="title">Flip Card Controller</span>
+            <div class="description">
+                This controller create a card that can flip on mouse hover. You can display information on both side of the card.
+            </div>
+    
+            <div class="dff-flip">
+                <div class="back">
+                    card 1 back
+                </div>
+                <div class="front">
+                    card 1 front
+                </div>
+            </div>
+            <div class="dff-flip">
+                <div class="back">
+                    card 2 back
+                </div>
+                <div class="front">
+                    card 2 front
+                </div>
+            </div>
+            <div class="dff-flip vertical">
+                <div class="back">
+                    card 3 back
+                </div>
+                <div class="front">
+                    card 3 front vertical flip
+                </div>
+            </div>
+            <div class="dff-flip">
+                <div class="back">
+                    card 4 back
+                </div>
+                <div class="front">
+                    card 4 front
+                </div>
+            </div>
+        </div>
+
         <span class="title">3D Cube</span>
         <div class="description">
-            List of various custom inputs
-
+            3D Cube simulation using css3.
+            You can put content on each face of the cube.
+            The cube can rotate automaticaly or by user input actions.
         </div>
         <div class="block">
             <div class="dff-cube rotateAuto">

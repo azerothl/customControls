@@ -28,6 +28,27 @@
     margin: 10px;
 }
 
+.dff-input-addon {
+    border: #08C 1px solid;
+    border-radius: 15px 0 0 15px;
+    background-color: #08C;
+    color: white;
+    padding: 2px 5px 2px 2px;
+    &.right {
+        border-radius: 0 15px 15px 0;
+        padding: 2px 2px 2px 5px;
+        position: relative;
+        float: right;
+    }
+    & + input {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        color: #242020;
+    }
+}
+
 // Flip card effect
 .dff-flip {
     transform-style: preserve-3d;
