@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./controller.css">
+</head>
+
+<body>
+    <div id="form-container" class="controller-container">
+        <span class="title">Form inputs</span>
+        <div class="description">
+            List of various custom Form inputs
+        </div>
+        <form action="" type="POST">
+                <label for="text-test">Text input</label>
+            <input type="text" name="text-test" placeholder="This is a placeholder text"/>
+            
+            <label for="text-test">Mail input</label>
+            <span class="dff-input-addon"><i class="fas fa-at"></i></span>
+            <span class="dff-input-addon right"><i class="fas fa-times"></i></span>
+            <input type="mail" name="text-test" placeholder="Your e-mail adress"/>
+            
+        </form>
+    </div>
+
+    <div id="switch-button-container" class="controller-container">
+        <span class="title">Switch Controller</span>
+        <div class="description">
+            This is a switch button controller
+
+        </div>
+        <div class="block">
+            <div id="switch-checkbox">
+                <label class="dff-switch">
+                    <input type="checkbox" />
+                    <div class="switch-btn"></div>
+                </label>
+            </div>
+            <div id="switch-checkbox">
+                <label class="dff-switch vertical">
+                    <input type="checkbox" />
+                    <div class="switch-btn"></div>
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="custom-checkbox-container" class="controller-container">
+            <span class="title">Custom Controllers</span>
+            <div class="description">
+                List of various custom inputs
+    
+            </div>
+        <ul>
+            <li>Checkbox</li>
+            square checkbox
+            <div class="block">
+                <label class="dff-chk">
+                    <input type="checkbox" name="first-check"> <span>First Item</span>
+                </label>
+                <label class="dff-chk">
+                    <input type="checkbox" name="second-check"> <span>Second Item</span>
+                </label>
+                <label class="dff-chk">
+                    <input type="checkbox" name="third-check"> <span>Third Item</span>
+                </label>
+            </div>
+            round checkbox
+            <div class="block">
+                <label class="dff-chk round">
+                    <input type="checkbox" name="first-check"> <span>First Item</span>
+                </label>
+                <label class="dff-chk round">
+                    <input type="checkbox" name="second-check"> <span>Second Item</span>
+                </label>
+                <label class="dff-chk round">
+                    <input type="checkbox" name="third-check"> <span>Third Item</span>
+                </label>
+            </div>
+            <li>Radio</li>
+            square radio buttons
+            <div class="block">
+                <label class="dff-rdio">
+                    <input type="radio" name="rdio"> <span>First Item</span>
+                </label>
+                <label class="dff-rdio">
+                    <input type="radio" name="rdio"> <span>Second Item</span>
+                </label>
+                <label class="dff-rdio">
+                    <input type="radio" name="rdio"> <span>Third Item</span>
+                </label>
+            </div>
+            round radio buttons
+            <div class="block">
+                <label class="dff-rdio round">
+                    <input type="radio" name="rdio2"> <span>First Item</span>
+                </label>
+                <label class="dff-rdio round">
+                    <input type="radio" name="rdio2"> <span>Second Item</span>
+                </label>
+                <label class="dff-rdio round">
+                    <input type="radio" name="rdio2"> <span>Third Item</span>
+                </label>
+            </div>
+        </ul>
+        
+    </div>
+    <div id="custom-controls-container" class="controller-container">
+        <span class="title">Custom Controllers</span>
+        <div class="description">
+            List of various custom inputs
+
+        </div>
+        <ul>
+            <li>ouverture onHover</li>
+            Portrait
+            <div class="block">
+                <div class="dff-book hover">
+                    <div class="dff-page">
+                        <div class="book-cover">
+                            <img src="./img/book-cover.jpg">
+                            <div class="top-right-txt white">text haut droit</div>
+                            <div class="top-left-txt white">text haut gauche</div>
+                            <div class="bottom-right-txt white">text bas droit</div>
+                            <div class="bottom-left-txt white">text bas gauche</div>
+                            <div class="book-title center-txt">Exemple de titre centré</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            Paysage
+            <div class="block">
+                    <div class="dff-book landscape hover">
+                        <div class="dff-page">
+                            <div class="book-cover">
+                                <img src="./img/book-cover2.jpg">
+                                <div class="top-right-txt white">text haut droit</div>
+                                <div class="top-left-txt white">text haut gauche</div>
+                                <div class="bottom-right-txt white">text bas droit</div>
+                                <div class="bottom-left-txt white">text bas gauche</div>
+                                <div class="book-title center-txt">Exemple de titre centré</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <li>ouverture au click</li>
+            <div class="block">
+                <div class="dff-book landscape">
+                    <div class="dff-page">
+                        <input type="checkbox" class="dff-chg-page" id="page3" name="chg-page">
+                        <label for="page3">Page 3</label>
+                        <div class="book-page">Page 3</div>
+                    </div>
+                    <div class="dff-page">
+                        <input type="checkbox" class="dff-chg-page" id="page2" name="chg-page">
+                        <label for="page2">Page 2</label>
+                        <div class="book-page">Page 2</div>
+                    </div>
+                    <div class="dff-page">
+                        <input type="checkbox" class="dff-chg-page" id="page1" name="chg-page">
+                        <label for="page1">Page 1</label>
+                        <div class="book-cover">
+                            <img src="./img/book-cover2.jpg">
+                            <div class="book-title center-txt">Exemple de titre centré</div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div id="flip-card-container">
+            <span class="title">Flip Card Controller</span>
+            <div class="description">
+                This controller create a card that can flip on mouse hover. You can display information on both side of the card.
+            </div>
+    
+            <div class="dff-flip">
+                <div class="back">
+                    card 1 back
+                </div>
+                <div class="front">
+                    card 1 front
+                </div>
+            </div>
+            <div class="dff-flip">
+                <div class="back">
+                    card 2 back
+                </div>
+                <div class="front">
+                    card 2 front
+                </div>
+            </div>
+            <div class="dff-flip vertical">
+                <div class="back">
+                    card 3 back
+                </div>
+                <div class="front">
+                    card 3 front vertical flip
+                </div>
+            </div>
+            <div class="dff-flip">
+                <div class="back">
+                    card 4 back
+                </div>
+                <div class="front">
+                    card 4 front
+                </div>
+            </div>
+        </div>
+
+        <span class="title">3D Cube</span>
+        <div class="description">
+            3D Cube simulation using css3.
+            You can put content on each face of the cube.
+            The cube can rotate automaticaly or by user input actions.
+        </div>
+        <div class="block">
+            <div class="dff-cube rotateAuto">
+                <div id="cube">
+                    <div id="front">This is the front of the cube</div>
+                    <div id="back">This is the back of the cube</div>
+                    <div id="left">This is the left side of the cube</div>
+                    <div id="right">This is the right side of the cube</div>
+                    <div id="top">This is the top of the cube</div>
+                    <div id="bottom">This is the bottom of the cube</div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="block">
+            
+            <div class="dff-cube rotateRightAction">
+                <input type="radio" name="rotate-cube" id="cube-top"></input>
+                <label class="cube-top" for="cube-top">    
+                    <span></span>
+                </label>
+                <input type="radio" name="rotate-cube" id="cube-bottom"></input>
+                <label class="cube-bottom" for="cube-bottom">
+                    <span></span>
+                </label>
+                <input type="radio" name="rotate-cube" id="cube-left"></input>
+                <label class="cube-left" for="cube-left">
+                    <span></span>
+                </label>
+                <input type="radio" name="rotate-cube" id="cube-right"></input>
+                <label class="cube-right" for="cube-right">
+                    <span></span>
+                </label>
+                
+                <div id="cube">
+                    <div id="front">This is the front of the cube</div>
+                    <div id="back">This is the back of the cube</div>
+                    <div id="left">This is the left side of the cube</div>
+                    <div id="right">This is the right side of the cube</div>
+                    <div id="top">This is the top of the cube</div>
+                    <div id="bottom">This is the bottom of the cube</div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+
+</html>
